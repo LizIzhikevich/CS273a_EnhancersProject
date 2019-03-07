@@ -9,4 +9,4 @@
 a new window where you can run the notebooks.
 
 When you're done working in this repository, deactivate the environment:
-`deactivate`.
+`source deactivate`.
