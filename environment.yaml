@@ -30,7 +30,7 @@ dependencies:
 - libgfortran=3.0.1=h93005f0_2
 - markupsafe=1.0=py35_0
 - mistune=0.7.4=py35_0
-- mkl=2019.1=144
+- mkl=2018.0.3
 - mkl_fft=1.0.6=py35_0
 - mkl_random=1.0.1=py35h5d10147_1
 - nbconvert=5.2.1=py35_0
