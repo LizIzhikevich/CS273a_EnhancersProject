@@ -1,84 +1,89 @@
 name: config
+channels:
+  - conda-forge
+  - defaults
 dependencies:
-- anaconda=custom=py35_0
-- appnope=0.1.0=py35_0
-- biopython=1.72=py35_0
-- blas=1.0=mkl
-- bleach=1.5.0=py35_0
-- ca-certificates=2019.1.23=0
-- certifi=2016.2.28=py35_0
-- decorator=4.1.2=py35_0
-- entrypoints=0.2.3=py35_0
-- html5lib=0.9999999=py35_0
-- icu=54.1=0
-- intel-openmp=2019.1=144
-- ipykernel=4.6.1=py35_0
-- ipython=6.1.0=py35_0
-- ipython_genutils=0.2.0=py35_0
-- ipywidgets=6.0.0=py35_0
-- jedi=0.10.2=py35_2
-- jinja2=2.9.6=py35_0
-- jsonschema=2.6.0=py35_0
-- jupyter=1.0.0=py35_3
-- jupyter_client=5.1.0=py35_0
-- jupyter_console=5.2.0=py35_0
-- jupyter_core=4.3.0=py35_0
-- libcxx=4.0.1=hcfea43d_1
-- libcxxabi=4.0.1=hcfea43d_1
-- libedit=3.1.20181209=hb402a30_0
-- libffi=3.2.1=h475c297_4
-- libgfortran=3.0.1=h93005f0_2
-- markupsafe=1.0=py35_0
-- mistune=0.7.4=py35_0
-- mkl=2018.0.3
-- mkl_fft=1.0.6=py35_0
-- mkl_random=1.0.1=py35h5d10147_1
-- nbconvert=5.2.1=py35_0
-- nbformat=4.4.0=py35_0
-- ncurses=6.1=hfc679d8_1
-- notebook=5.0.0=py35_0
-- numpy=1.15.2=py35h6a91979_0
-- numpy-base=1.15.2=py35h8a80b8c_0
-- openssl=1.0.2p=h470a237_0
-- pandocfilters=1.4.2=py35_0
-- path.py=10.3.1=py35_0
-- pexpect=4.2.1=py35_0
-- pickleshare=0.7.4=py35_0
-- pip=9.0.1=py35_1
-- prompt_toolkit=1.0.15=py35_0
-- ptyprocess=0.5.2=py35_0
-- pygments=2.2.0=py35_0
-- pyqt=5.6.0=py35_2
-- python=3.5.6=hc167b69_0
-- python-dateutil=2.6.1=py35_0
-- pyzmq=16.0.2=py35_0
-- qt=5.6.2=2
-- qtconsole=4.3.1=py35_0
-- readline=7.0=hc1231fa_4
-- scikit-learn=0.20.0=py35h4f467ca_1
-- scipy=1.1.0=py35h28f7352_1
-- setuptools=36.4.0=py35_1
-- simplegeneric=0.8.1=py35_1
-- sip=4.18=py35_0
-- six=1.10.0=py35_0
-- sqlite=3.24.0=h2f33b56_0
-- terminado=0.6=py35_0
-- testpath=0.3.1=py35_0
-- tk=8.6.7=hcdce994_1
-- tornado=4.5.2=py35_0
-- tqdm=4.15.0=py35_0
-- traitlets=4.3.2=py35_0
-- wcwidth=0.1.7=py35_0
-- wheel=0.29.0=py35_0
-- widgetsnbextension=3.0.2=py35_0
-- xz=5.2.4=h1de35cc_4
-- zlib=1.2.11=0
-- pip:
-  - ipython-genutils==0.2.0
-  - jupyter-client==5.1.0
-  - jupyter-console==5.2.0
-  - jupyter-core==4.3.0
-  - mkl-fft==1.0.6
-  - mkl-random==1.0.1
-  - prompt-toolkit==1.0.15
+  - appnope=0.1.0=py35_0
+  - biopython=1.72=py35_0
+  - bleach=1.5.0=py35_0
+  - certifi=2016.2.28=py35_0
+  - cycler=0.10.0=py_1
+  - decorator=4.1.2=py35_0
+  - freetype=2.9.1=h597ad8a_1005
+  - html5lib=0.9999999=py35_0
+  - ipykernel=4.6.1=py35_0
+  - ipython=6.1.0=py35_0
+  - ipython_genutils=0.2.0=py35_0
+  - ipywidgets=6.0.0=py35_0
+  - jinja2=2.9.6=py35_0
+  - jsonschema=2.6.0=py35_0
+  - jupyter_client=5.1.0=py35_0
+  - jupyter_console=5.2.0=py35_0
+  - jupyter_core=4.3.0=py35_0
+  - kiwisolver=1.0.1=py35h2d50403_2
+  - libcxx=4.0.1=hcfea43d_1
+  - libpng=1.6.36=ha441bb4_1000
+  - markupsafe=1.0=py35_0
+  - matplotlib=2.2.3=py35h0e0179f_0
+  - mistune=0.7.4=py35_0
+  - mkl_fft=1.0.6=py35_0
+  - nbformat=4.4.0=py35_0
+  - ncurses=6.1=hfc679d8_1
+  - notebook=5.0.0=py35_0
+  - openssl=1.0.2p=h470a237_0
+  - pandocfilters=1.4.2=py35_0
+  - path.py=10.3.1=py35_0
+  - pexpect=4.2.1=py35_0
+  - pickleshare=0.7.4=py35_0
+  - pip=9.0.1=py35_1
+  - prompt_toolkit=1.0.15=py35_0
+  - ptyprocess=0.5.2=py35_0
+  - pygments=2.2.0=py35_0
+  - pyparsing=2.3.1=py_0
+  - pyqt=5.6.0=py35_2
+  - python-dateutil=2.6.1=py35_0
+  - pytz=2018.9=py_0
+  - qtconsole=4.3.1=py35_0
+  - sip=4.18=py35_0
+  - six=1.10.0=py35_0
+  - sqlite=3.24.0=h2f33b56_0
+  - terminado=0.6=py35_0
+  - testpath=0.3.1=py35_0
+  - tornado=4.5.2=py35_0
+  - tqdm=4.15.0=py35_0
+  - traitlets=4.3.2=py35_0
+  - wcwidth=0.1.7=py35_0
+  - webencodings=0.5.1=py_1
+  - wheel=0.29.0=py35_0
+  - widgetsnbextension=3.0.2=py35_0
+  - zlib=1.2.11=0
+  - anaconda=custom=py35_0
+  - blas=1.0=mkl
+  - ca-certificates=2019.1.23=0
+  - entrypoints=0.2.3=py35_0
+  - icu=54.1=0
+  - intel-openmp=2019.1=144
+  - jedi=0.10.2=py35_2
+  - jupyter=1.0.0=py35_3
+  - libcxxabi=4.0.1=hcfea43d_1
+  - libedit=3.1.20181209=hb402a30_0
+  - libffi=3.2.1=h475c297_4
+  - libgfortran=3.0.1=h93005f0_2
+  - mkl=2018.0.3=1
+  - mkl_random=1.0.1=py35h5d10147_1
+  - nbconvert=5.2.1=py35_0
+  - numpy=1.15.2=py35h6a91979_0
+  - numpy-base=1.15.2=py35h8a80b8c_0
+  - python=3.5.6=hc167b69_0
+  - pyzmq=16.0.2=py35_0
+  - qt=5.6.2=2
+  - readline=7.0=hc1231fa_4
+  - scikit-learn=0.20.0=py35h4f467ca_1
+  - scipy=1.1.0=py35h28f7352_1
+  - setuptools=36.4.0=py35_1
+  - simplegeneric=0.8.1=py35_1
+  - tk=8.6.7=hcdce994_1
+  - xz=5.2.4=h1de35cc_4
+  - pip:
+    - cython==0.29.6
 
