@@ -2,6 +2,11 @@ from Bio import SeqIO
 import pickle
 import sys
 
+# error exit
+def error_exit():
+	print('parse_data.py <fafile> <outfile>')
+	sys.exit(2)
+
 # return true if positive, false if negative
 def is_enhancer( seq_record ):
 	identify = seq_record.description.split('|')[3]
@@ -11,8 +16,7 @@ def is_enhancer( seq_record ):
 		return False
 #return the sequences
 def extract_sequences( seq_record ):
-	my_seq= str(seq_record.seq)	
-	print(my_seq)
+	my_seq = str(seq_record.seq)
 	return my_seq
 
 #true if human, false if mouse
@@ -50,27 +54,23 @@ def extract_enhancer_features( seq_record ):
 #def build_feature_dict( file ):
 
 #for seq_record in SeqIO.parse("data", "fasta"):
-
-if __name__ == "__main__":
-	data = []
-
-	file = open('enhancer_features', 'wb')
+def main(args):
+	if len(args) < 2:
+		error_exit()
+	fafile = args[0]
+	outfile = args[1]
 
 	#build_feature_dict( file )
-
-	for seq_record in SeqIO.parse("data", "fasta"):
-		
+	data = []
+	for seq_record in SeqIO.parse(fafile, "fasta"):
 		data.append( [extract_sequences( seq_record ), 
 				is_enhancer( seq_record ), 
 				extract_enhancer_features( seq_record )] )
+	print('Number of samples: %d\n' % len(data))
 
-	print(len(data))
-	
-	# dump information to that file
+	file = open(outfile, 'wb')
 	pickle.dump(data, file)
-
-	# close the file
 	file.close()
-		
 
-	
+if __name__ == "__main__":
+	main(sys.argv[1:])
