@@ -19,9 +19,9 @@ def extract_sequences( seq_record ):
 def extract_human( seq_record ):
 	identify = seq_record.description.split('|')[0]
 	if 'human' in identify:
-                return True
+		return True
 	else:
-                return False
+		return False
 
 #return a list of all the extra features 
 #assumes record is positive
@@ -31,14 +31,18 @@ def extract_enhancer_features( seq_record ):
 	features = seq_record.description.split('|')[4:]	
 	returning_features = []
 
-	#fore brain , midbrain and limb
+	# forebrain, midbrain, hindbrain, limb, and heart
 	for item in features:
 		if 'forebrain' in item:
 			returning_features.append( 'forebrain' )
 		if 'midbrain' in item:
-                        returning_features.append( 'midbrain' )
+			returning_features.append( 'midbrain' )
+		if 'hindbrain' in item:
+			returning_features.append( 'hindbrain' ) 
 		if 'limb' in item:
-                        returning_features.append( 'limb' )
+			returning_features.append( 'limb' )
+		if 'heart' in item:
+			returning_features.append( 'heart' )
 
 	return returning_features
 
@@ -48,11 +52,6 @@ def extract_enhancer_features( seq_record ):
 #for seq_record in SeqIO.parse("data", "fasta"):
 
 if __name__ == "__main__":
-
-	with open('enhancer_features','rb') as f:
-		labels = pickle.load(f)
-		print( labels[0])
-		sys.exit()
 	data = []
 
 	file = open('enhancer_features', 'wb')
