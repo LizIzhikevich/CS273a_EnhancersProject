@@ -10,3 +10,7 @@ a new window where you can run the notebooks.
 
 When you're done working in this repository, deactivate the environment:
 `source deactivate`.
+
+## Parse the FASTA data file
+Run `python3 parse_data.py data.fa parsed_data`.
+
