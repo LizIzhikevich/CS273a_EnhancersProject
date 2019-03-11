@@ -1,0 +1,111 @@
+Label distributions for different data sets
+2019-03-10 22:22:42
+
+Whole training set
+forebrain (0): 127 (7.20%)
+midbrain (1): 76 (4.31%)
+hindbrain (2): 66 (3.74%)
+heart (3): 169 (9.58%)
+limb (4): 154 (8.73%)
+others (5): 1172 (66.44%)
+Total count: 1764
+
+Whole testing set
+forebrain (0): 55 (7.27%)
+midbrain (1): 33 (4.36%)
+hindbrain (2): 28 (3.70%)
+heart (3): 72 (9.51%)
+limb (4): 66 (8.72%)
+others (5): 503 (66.45%)
+Total count: 757
+
+0 Training fold
+forebrain (0): 101 (7.17%)
+midbrain (1): 60 (4.26%)
+hindbrain (2): 52 (3.69%)
+heart (3): 135 (9.59%)
+limb (4): 123 (8.74%)
+others (5): 937 (66.55%)
+Total count: 1408
+
+0 Test fold
+forebrain (0): 26 (7.30%)
+midbrain (1): 16 (4.49%)
+hindbrain (2): 14 (3.93%)
+heart (3): 34 (9.55%)
+limb (4): 31 (8.71%)
+others (5): 235 (66.01%)
+Total count: 356
+
+1 Training fold
+forebrain (0): 101 (7.16%)
+midbrain (1): 61 (4.33%)
+hindbrain (2): 53 (3.76%)
+heart (3): 135 (9.57%)
+limb (4): 123 (8.72%)
+others (5): 937 (66.45%)
+Total count: 1410
+
+1 Test fold
+forebrain (0): 26 (7.34%)
+midbrain (1): 15 (4.24%)
+hindbrain (2): 13 (3.67%)
+heart (3): 34 (9.60%)
+limb (4): 31 (8.76%)
+others (5): 235 (66.38%)
+Total count: 354
+
+2 Training fold
+forebrain (0): 102 (7.22%)
+midbrain (1): 61 (4.32%)
+hindbrain (2): 53 (3.75%)
+heart (3): 135 (9.56%)
+limb (4): 123 (8.71%)
+others (5): 938 (66.43%)
+Total count: 1412
+
+2 Test fold
+forebrain (0): 25 (7.10%)
+midbrain (1): 15 (4.26%)
+hindbrain (2): 13 (3.69%)
+heart (3): 34 (9.66%)
+limb (4): 31 (8.81%)
+others (5): 234 (66.48%)
+Total count: 352
+
+3 Training fold
+forebrain (0): 102 (7.22%)
+midbrain (1): 61 (4.32%)
+hindbrain (2): 53 (3.75%)
+heart (3): 135 (9.56%)
+limb (4): 123 (8.71%)
+others (5): 938 (66.43%)
+Total count: 1412
+
+3 Test fold
+forebrain (0): 25 (7.10%)
+midbrain (1): 15 (4.26%)
+hindbrain (2): 13 (3.69%)
+heart (3): 34 (9.66%)
+limb (4): 31 (8.81%)
+others (5): 234 (66.48%)
+Total count: 352
+
+4 Training fold
+forebrain (0): 102 (7.21%)
+midbrain (1): 61 (4.31%)
+hindbrain (2): 53 (3.75%)
+heart (3): 136 (9.62%)
+limb (4): 124 (8.77%)
+others (5): 938 (66.34%)
+Total count: 1414
+
+4 Test fold
+forebrain (0): 25 (7.14%)
+midbrain (1): 15 (4.29%)
+hindbrain (2): 13 (3.71%)
+heart (3): 33 (9.43%)
+limb (4): 30 (8.57%)
+others (5): 234 (66.86%)
+Total count: 350
+
