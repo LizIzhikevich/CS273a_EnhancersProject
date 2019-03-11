@@ -72,7 +72,7 @@ def main(args):
 	with open(reportfile, 'w') as file:
 		file.write('Model: %s\n' % model)
 		file.write('Mode: %s\n' % mode)
-		file.write('Process started: %s\n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+		file.write('Modeling process started: %s\n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 
 	# Fit the model
 	print('Training model...')
@@ -98,11 +98,11 @@ def main(args):
 	# Evaluate the model for test AUROC
 	with open(reportfile, 'a') as file:
 		file.write('Testing results\n')
-		evaluator.write_ovr_auroc(Y_test, Y_test_pred, GEN_LABELS, GEN_LAB_STR, reportfile)
-		evaluator.write_ovo_auroc(Y_test, Y_test_pred, FINE_LABELS, FINE_LAB_STR, reportfile)
+	evaluator.write_ovr_auroc(Y_test, Y_test_pred, GEN_LABELS, GEN_LAB_STR, reportfile)
+	evaluator.write_ovo_auroc(Y_test, Y_test_pred, FINE_LABELS, FINE_LAB_STR, reportfile)
 
 	with open(reportfile, 'a') as file:
-		file.write('Process ended: %s\n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+		file.write('Modeling process ended: %s\n' % datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 	print('Done!')
 
 if __name__ == "__main__":
