@@ -13,6 +13,7 @@ When you're done working in this repository, deactivate the environment:
 
 ## Data preprocessing
 To parse the FASTA raw data file, run `python3 parse_data.py data.fa parsed_data`.
+
 To preprocess and split the parsed data, run `python3 preprocess_data.py parsed_data preprocessed_data/` (assuming that the directory `preprocessed_data` already exists).
 
 ## Output
