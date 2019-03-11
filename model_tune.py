@@ -124,7 +124,7 @@ def main(args):
 	if model == 'reg_svm':
 		C = [0.1 * 0.1**i for i in range(3)]
 	elif model == 'l1_logit':
-		C = [0.1 * 0.1**i for i in range(3)]
+		C = [0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.0005, 0.0001]
 	elif model == 'l2_logit':
 		C = [0.1 * 0.1**i for i in range(3)]
 	else:
@@ -143,6 +143,7 @@ def main(args):
 			Y_ktest_pred = fold_clf.predict_proba(X_ktests[fold])
 			auroc = roc_auc_score(onehot_encoder.transform(Y_ktests[fold]), Y_ktest_pred, average='macro')
 			kfold_results[fold, i] = auroc
+			print('Param %d/%d: %d fold completed' % (i + 1, len(C), fold + 1))
 	kfold_result_avg = np.mean(kfold_results, axis=0)
 	best_param = C[np.argmax(kfold_result_avg)]
 
