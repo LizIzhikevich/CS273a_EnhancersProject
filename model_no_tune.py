@@ -11,8 +11,8 @@ from sklearn.linear_model import LogisticRegression
 import evaluator
 
 # Global variables
-GEN_LABELS = [(0,1,2), 3, 4] # general enhancer function labels
-GEN_LAB_STR = {(0,1,2): 'brain', 3: 'heart', 4: 'limb'}
+GEN_LABELS = [(0,1,2), 0, 1, 2, 3, 4, 5] # general enhancer function labels
+GEN_LAB_STR = {(0,1,2): 'brain', 0: 'forebrain', 1: 'midbrain', 2: 'hindbrain', 3: 'heart', 4: 'limb', 5: 'others'}
 
 FINE_LABELS = [0, 1, 2, 3, 4] # fine-grain enhancer function labels
 FINE_LAB_STR = {0: 'forebrain', 1: 'midbrain', 2: 'hindbrain', 3: 'heart', 4: 'limb'}

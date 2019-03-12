@@ -13,8 +13,8 @@ from sklearn.preprocessing import LabelBinarizer
 import evaluator
 
 # Global variables
-GEN_LABELS = [(0,1,2), 3, 4] # general enhancer function labels
-GEN_LAB_STR = {(0,1,2): 'brain', 3: 'heart', 4: 'limb'}
+GEN_LABELS = [(0,1,2), 0, 1, 2, 3, 4, 5] # general enhancer function labels
+GEN_LAB_STR = {(0,1,2): 'brain', 0: 'forebrain', 1: 'midbrain', 2: 'hindbrain', 3: 'heart', 4: 'limb', 5: 'others'}
 
 FINE_LABELS = [0, 1, 2, 3, 4] # fine-grain enhancer function labels
 FINE_LAB_STR = {0: 'forebrain', 1: 'midbrain', 2: 'hindbrain', 3: 'heart', 4: 'limb'}
@@ -122,11 +122,11 @@ def main(args):
 	# Set up model parameters
 	# The paramters can be changed for different models
 	if model == 'reg_svm':
-		C = [0.1 * 0.1**i for i in range(3)]
+		C = [0.0001, 0.00005, 0.00001, 0.000005, 0.000001]
 	elif model == 'l1_logit':
 		C = [0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.0005, 0.0001]
 	elif model == 'l2_logit':
-		C = [0.1 * 0.1**i for i in range(3)]
+		C = [0.0001, 0.00001, 0.000001, 0.0000001, 0.00000001]
 	else:
 		print('Error: %s not supported; model has to be one of reg_svm, l1_logit, or l2_logit\n' % model)
 		sys.exit(2)
