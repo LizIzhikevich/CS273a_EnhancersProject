@@ -122,11 +122,11 @@ def main(args):
 	# Set up model parameters
 	# The paramters can be changed for different models
 	if model == 'reg_svm':
-		C = [0.0001, 0.00005, 0.00001, 0.000005, 0.000001]
+		C = [0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.00025, 0.0005, 0.00075, 0.0001]
 	elif model == 'l1_logit':
-		C = [0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.0005, 0.0001]
+		C = [0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.00025, 0.0005, 0.00075, 0.0001]
 	elif model == 'l2_logit':
-		C = [0.0001, 0.00001, 0.000001, 0.0000001, 0.00000001]
+		C = [0.5, 0.1, 0.05, 0.01, 0.005, 0.001, 0.00025, 0.0005, 0.00075, 0.0001]
 	else:
 		print('Error: %s not supported; model has to be one of reg_svm, l1_logit, or l2_logit\n' % model)
 		sys.exit(2)
