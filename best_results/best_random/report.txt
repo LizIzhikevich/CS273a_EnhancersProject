@@ -1,0 +1,44 @@
+Model: svm
+Mode: run
+Modeling process started: 2019-03-12 09:35
+Training results
+brain vs. rest: AUROC = 1.000
+forebrain vs. rest: AUROC = 1.000
+midbrain vs. rest: AUROC = 1.000
+hindbrain vs. rest: AUROC = 1.000
+heart vs. rest: AUROC = 1.000
+limb vs. rest: AUROC = 1.000
+others vs. rest: AUROC = 1.000
+
+forebrain vs. midbrain: AUROC = 1.000
+forebrain vs. hindbrain: AUROC = 1.000
+forebrain vs. heart: AUROC = 1.000
+forebrain vs. limb: AUROC = 1.000
+midbrain vs. hindbrain: AUROC = 1.000
+midbrain vs. heart: AUROC = 1.000
+midbrain vs. limb: AUROC = 1.000
+hindbrain vs. heart: AUROC = 1.000
+hindbrain vs. limb: AUROC = 1.000
+heart vs. limb: AUROC = 1.000
+
+Testing results
+brain vs. rest: AUROC = 0.938
+forebrain vs. rest: AUROC = 0.917
+midbrain vs. rest: AUROC = 0.853
+hindbrain vs. rest: AUROC = 0.902
+heart vs. rest: AUROC = 0.936
+limb vs. rest: AUROC = 0.899
+others vs. rest: AUROC = 1.000
+
+forebrain vs. midbrain: AUROC = 0.693
+forebrain vs. hindbrain: AUROC = 0.572
+forebrain vs. heart: AUROC = 0.826
+forebrain vs. limb: AUROC = 0.638
+midbrain vs. hindbrain: AUROC = 0.438
+midbrain vs. heart: AUROC = 0.587
+midbrain vs. limb: AUROC = 0.590
+hindbrain vs. heart: AUROC = 0.821
+hindbrain vs. limb: AUROC = 0.703
+heart vs. limb: AUROC = 0.685
+
+Modeling process ended: 2019-03-12 09:36
