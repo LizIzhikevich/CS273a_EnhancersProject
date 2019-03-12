@@ -6,6 +6,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import StratifiedKFold
 from tqdm import tqdm
+import random
 
 # Global variables
 K = 6 # 6mer
@@ -14,7 +15,7 @@ SEED=123 # random state
 
 # Error exit
 def error_exit():
-    print('preprocess_data.py <parsed_datafile> <out_dir>')
+    print('preprocess_data.py <parsed_datafile> <out_dir> <randomize>')
     sys.exit(2)
 
 # Encode string labels as integers
@@ -80,10 +81,11 @@ def write_Y_dist(Y, str_labels, textfile, preamble):
 		file.write('\n')
 
 def main(args):
-	if len(args) < 2:
+	if len(args) < 3:
 		error_exit()
 	parsed_datafile = args[0]
 	out_dir = args[1]
+	randomize = args[2] # randomize the negative sequences
 
 	# Initiate the record for label distributions
 	label_dist_file = '%slabel_dist.txt' % out_dir
@@ -111,6 +113,10 @@ def main(args):
 		tissues = d[2]
 		y = get_y(tissues, label_encoding)
 		if y is not None:
+			if randomize == 'randomize' and y == len(label_encoding):
+				print(y)
+				print(randomize)
+				sequence = ''.join(random.sample(sequence, len(sequence)))
 			X.append(encode_sequence(sequence, possible_6mers))
 			Y.append(y)
 	X = np.array(X)

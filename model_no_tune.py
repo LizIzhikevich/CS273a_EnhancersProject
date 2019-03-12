@@ -19,15 +19,16 @@ FINE_LAB_STR = {0: 'forebrain', 1: 'midbrain', 2: 'hindbrain', 3: 'heart', 4: 'l
 
 # Error exit
 def error_exit():
-	print('model_no_tune.py <datadir> <model> <mode>')
+	print('model_no_tune.py <datadir> <model> <mode> <randomize>')
 	sys.exit(2)
 
 def main(args):
-	if len(args) < 3:
+	if len(args) < 4:
 		error_exit()
 	datadir = args[0]
 	model = args[1]
 	mode = args[2]
+	randomize = args[3]
 
 	# Load the data
 	with open('%sX_train.pickle' % datadir, 'rb') as file:
@@ -59,6 +60,8 @@ def main(args):
 
 	# Create directories for saving files
 	master_resultdir = 'results'
+	if randomize == 'randomize':
+		master_resultdir = 'random_' + master_resultdir
 	model_resultdir = '%s/%s_' % (master_resultdir, model)
 	model_resultdir += datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")
 

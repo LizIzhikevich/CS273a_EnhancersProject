@@ -21,7 +21,7 @@ FINE_LAB_STR = {0: 'forebrain', 1: 'midbrain', 2: 'hindbrain', 3: 'heart', 4: 'l
 
 # Error exit
 def error_exit():
-    print('model_tune.py <datadir> <numfold> <model> <mode>')
+    print('model_tune.py <datadir> <numfold> <model> <mode> <randomize>')
     sys.exit(2)
 
 # Get the classifier given a model str and param
@@ -42,12 +42,13 @@ def get_clf(model_str, param):
     return clf
 
 def main(args):
-	if len(args) < 4:
+	if len(args) < 5:
 		error_exit()
 	datadir = args[0]
 	numfold = int(args[1])
 	model = args[2] # one of reg_svm, l1_logit, l2_logit
 	mode = args[3] # debug, ballpark, or anything else
+	randomize = args[4]
 
 	# Set the sample sizes for different modes
 	if mode == 'debug':
@@ -104,6 +105,8 @@ def main(args):
 
 	# Create directories for saving files
 	master_resultdir = 'results'
+	if randomize == 'randomize':
+		master_resultdir = 'random_' + master_resultdir
 	model_resultdir = '%s/%s_' % (master_resultdir, model)
 	model_resultdir += datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")
 
