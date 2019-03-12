@@ -1,0 +1,57 @@
+Model: reg_svm
+Mode: run
+Modeling process started: 2019-03-11 23:54
+Hyperparameter tuning resutls
+C = 5.000E-01: mean macro-AUROC = 0.610
+C = 1.000E-01: mean macro-AUROC = 0.608
+C = 5.000E-02: mean macro-AUROC = 0.607
+C = 1.000E-02: mean macro-AUROC = 0.612
+C = 5.000E-03: mean macro-AUROC = 0.606
+C = 1.000E-03: mean macro-AUROC = 0.608
+C = 2.500E-04: mean macro-AUROC = 0.629
+C = 5.000E-04: mean macro-AUROC = 0.621
+C = 7.500E-04: mean macro-AUROC = 0.610
+C = 1.000E-04: mean macro-AUROC = 0.619
+Best C = 2.500E-04
+
+Training results
+brain vs. rest: AUROC = 0.905
+forebrain vs. rest: AUROC = 0.976
+midbrain vs. rest: AUROC = 0.998
+hindbrain vs. rest: AUROC = 0.999
+heart vs. rest: AUROC = 0.939
+limb vs. rest: AUROC = 0.956
+others vs. rest: AUROC = 0.819
+
+forebrain vs. midbrain: AUROC = 0.958
+forebrain vs. hindbrain: AUROC = 0.956
+forebrain vs. heart: AUROC = 0.996
+forebrain vs. limb: AUROC = 0.970
+midbrain vs. hindbrain: AUROC = 0.980
+midbrain vs. heart: AUROC = 1.000
+midbrain vs. limb: AUROC = 1.000
+hindbrain vs. heart: AUROC = 1.000
+hindbrain vs. limb: AUROC = 1.000
+heart vs. limb: AUROC = 0.933
+
+Testing results
+brain vs. rest: AUROC = 0.653
+forebrain vs. rest: AUROC = 0.706
+midbrain vs. rest: AUROC = 0.530
+hindbrain vs. rest: AUROC = 0.658
+heart vs. rest: AUROC = 0.750
+limb vs. rest: AUROC = 0.621
+others vs. rest: AUROC = 0.572
+
+forebrain vs. midbrain: AUROC = 0.696
+forebrain vs. hindbrain: AUROC = 0.606
+forebrain vs. heart: AUROC = 0.877
+forebrain vs. limb: AUROC = 0.682
+midbrain vs. hindbrain: AUROC = 0.456
+midbrain vs. heart: AUROC = 0.673
+midbrain vs. limb: AUROC = 0.615
+hindbrain vs. heart: AUROC = 0.823
+hindbrain vs. limb: AUROC = 0.715
+heart vs. limb: AUROC = 0.685
+
+Modeling process ended: 2019-03-12 01:25
