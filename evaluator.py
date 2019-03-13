@@ -2,7 +2,7 @@
 
 import numpy as np
 import itertools
-from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_auc_score, precision_recall_curve, auc
 
 # Make binary true label and predicted probability
 def binarize_Y(Y_actual, Y_predicted, pos_labels, neg_labels=None):
@@ -49,3 +49,17 @@ def write_ovo_auroc(Y_actual, Y_predicted, labels, label_to_str, textfile):
             auroc = roc_auc_score(bin_Y_actual, bin_Y_pred)
             file.write('%s vs. %s: AUROC = %.3f\n' % (pos_str, neg_str, auroc))
         file.write('\n')
+
+def interpolate_precision(precisions):
+    interpolated_p = []
+    max_p = 0
+    for p in precisions:
+        max_p = max(p, max_p)
+        interpolated_p.append(max_p)
+    return interpolated_p
+
+def get_interpolated_avg_precision(true_y, prob_y):
+    precision, recall, _ = precision_recall_curve(true_y, prob_y)
+    precision = interpolate_precision(precision)
+    pr_auc = auc(recall, precision)
+    return pr_auc
